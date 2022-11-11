@@ -26,12 +26,15 @@ const ListBooks = () => {
           </thead>
           <tbody className="table-group-divider">
             {booksState.books.map((book, index) => {
+              const myCategory = categoriesState.categories.find(
+                (item) => item.id === book.categoryId
+              );
               return (
                 <tr key={book.id}>
                   <th>{index + 1}</th>
                   <td>{book.title}</td>
                   <td>{book.author}</td>
-                  <td></td>
+                  <td>{myCategory.name}</td>
                   <td>
                     <Link to={`/book-detail/${book.id}`}>Detay</Link>
                   </td>
