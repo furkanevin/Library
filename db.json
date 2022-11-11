@@ -1,0 +1,41 @@
+{
+    "books":[
+        {
+            "id":"1",
+            "title":"10 Küçük Zenci",
+            "isbn":"",
+            "author":"Agatha Cristie",
+            "publisher":"Varlık Yayınları ",
+            "categoryId":"2",
+            "isRead":true
+        },
+        {
+            "id":"2",
+            "title":"Art Of Racing in The Rain",
+            "isbn":"",
+            "author":"Garth Stein",
+            "publisher":"Is Bankası Yayınları",
+            "categoryId":"1",
+            "isRead":false
+        }
+    ],
+    "categories":[
+        {
+            "id":"1",
+            "name":"Roman"
+        },
+        {
+            "id":"2",
+            "name":"Hikaye"
+        },
+        {
+            "id":"3",
+            "name":"Bilim Kurgu"
+        },
+        {
+            "id":"4",
+            "name":"Fabl"
+        }
+    ]
+
+}

@@ -1,0 +1,19 @@
+Tanım:
+Kişisel kitaplığı sanal ortama taşıma üzerine çalışma
+
+Dependencies:
+ => axios
+ => React Router
+ => Redux
+ => Json-server
+
+ TO DO 
+ => JSON SERVER +
+ => Redux Structure +
+ => Store a eklenecek stateler;
+    1-Books +
+    2-Students +
+ => Provider +
+ => Router Structure +
+ => UI Library +
+ => Render Books 
