@@ -31,8 +31,8 @@ const ListBooks = () => {
               return (
                 <tr key={book.id}>
                   <th>{index + 1}</th>
-                  <td>{book.title}</td>
-                  <td>{book.author}</td>
+                  <td>{book?.title}</td>
+                  <td>{book?.author}</td>
                   <td>{myCategory?.name}</td>
                   <td>
                     <Link to={`/book-detail/${book.id}`}>Detay</Link>

@@ -178,9 +178,30 @@ body {
     flex-shrink: 0;
   }
 }
-
+//! HOME
 .home {
   width: 100vw;
   height: 100vh;
   background-color: #3d4954;
+}
+
+//! BOOK DETAILS
+.blur {
+  width: 100%;
+  height: 100vh;
+  background-color: #171718b7;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .close {
+  }
+  .Modal {
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+  }
 }

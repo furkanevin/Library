@@ -8,6 +8,7 @@ const Home = () => {
       <Header />
       <h1>Home Page</h1>
       <ListBooks />
+      <BookDetails />
     </div>
   );
 };

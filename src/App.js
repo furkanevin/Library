@@ -47,6 +47,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/book-detail/:bookId" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
