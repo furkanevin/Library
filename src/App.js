@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import actionTypes from './redux/actions/actionTypes';
-
+import BookDetails from './pages/BookDetails';
 function App() {
   const dispatch = useDispatch();
 
@@ -47,7 +47,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/book-detail/:bookId" element={<Home />} />
+        <Route path="/book-detail/:bookId" element={<BookDetails />} />
       </Routes>
     </BrowserRouter>
   );

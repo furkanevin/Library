@@ -1,14 +1,13 @@
-import BookDetails from '../components/BookDetails';
 import Header from '../components/Header';
 import ListBooks from './../components/ListBooks';
+import { useParams, Link } from 'react-router-dom';
 
 const Home = () => {
+  const bookId = useParams();
   return (
     <div className="home">
       <Header />
-      <h1>Home Page</h1>
       <ListBooks />
-      <BookDetails />
     </div>
   );
 };
