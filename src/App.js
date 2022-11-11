@@ -18,7 +18,6 @@ function App() {
           type: actionTypes.bookTypes.FETCH_BOOKS_SUCCESS,
           payload: res.data,
         });
-        console.log(res.data);
       })
       .catch((err) => {
         dispatch({
