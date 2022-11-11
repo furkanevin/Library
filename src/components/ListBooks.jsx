@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const ListBooks = () => {
   const { booksState, categoriesState } = useSelector((state) => state);
-  console.table(booksState);
   return (
     <div className="listBooks container my-5">
       <div className="table-responsive">
@@ -34,7 +33,7 @@ const ListBooks = () => {
                   <th>{index + 1}</th>
                   <td>{book.title}</td>
                   <td>{book.author}</td>
-                  <td>{myCategory.name}</td>
+                  <td>{myCategory?.name}</td>
                   <td>
                     <Link to={`/book-detail/${book.id}`}>Detay</Link>
                   </td>
