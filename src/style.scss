@@ -122,7 +122,7 @@ body {
 }
 
 .header-title {
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 400;
   margin-right: 220px;
   text-decoration: none;
@@ -182,37 +182,5 @@ body {
 .home {
   width: 100vw;
   height: 100vh;
-  background-color: #3d4954;
-}
-
-//! BOOK DETAILS
-.bookDeails {
-  overflow-y: hidden;
-  .blur {
-    width: 100%;
-    height: auto;
-    background-color: #171718b7;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    .Modal {
-      width: 60%;
-      min-height: 600px;
-      background-color: white;
-      border-radius: 20px;
-      padding: 40px 30px;
-      position: relative;
-      .close {
-        color: black;
-        position: absolute;
-        top: 10px;
-        right: 30px;
-        font-size: 40px;
-        cursor: pointer;
-      }
-    }
-  }
+  background-color: #222831;
 }

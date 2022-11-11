@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fragment+Mono&family=Kalam:wght@300;400&family=Poppins:wght@200;300;400;500&display=swap');
+/* font-family: 'Amatic SC', cursive;
+font-family: 'Fragment Mono', monospace;
+font-family: 'Kalam', cursive;
+font-family: 'Poppins', sans-serif; */
 
+/*!  HEADER */
 ::before,
 ::after {
   content: '';
@@ -743,6 +748,8 @@ figcaption p {
 }
 
 /*! Table
+
+
 /*	
 	Table Responsive
 	===================
@@ -755,8 +762,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   line-height: 1.42em;
-  color: #a7a1ae;
-  background-color: #1f2739;
+  color: #b6b6b6;
+  background-color: #393e46;
 }
 
 h1 {
@@ -795,7 +802,7 @@ h2 a {
   font-weight: bold;
   font-size: 1em;
   text-align: left;
-  color: #185875;
+  color: #eeeeee;
 }
 
 .container td {
@@ -810,7 +817,7 @@ h2 a {
   text-align: left;
   overflow: hidden;
   width: 80%;
-  margin: 200px auto;
+  margin: 40px auto;
   display: table;
   padding: 0 0 8em 0;
 }
@@ -835,7 +842,7 @@ h2 a {
 }
 
 .container th {
-  background-color: #1f2739;
+  background-color: #222831;
 }
 
 .container td:first-child {
@@ -869,4 +876,44 @@ h2 a {
   .container th:nth-child(4) {
     display: none;
   }
+}
+
+/*! List */
+.buttonHolder {
+  width: 80%;
+  margin: 130px auto 0;
+  display: flex;
+  justify-content: end;
+}
+.button-31 {
+  background-color: #ffd369;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #393e46;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Farfetch Basis', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 140px;
+  scale: 1.1;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: 0.75;
 }

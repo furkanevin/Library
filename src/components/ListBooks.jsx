@@ -7,6 +7,9 @@ const ListBooks = () => {
   const navigate = useNavigate();
   return (
     <div className="listBooks">
+      <div className="buttonHolder">
+        <button class="button-31">Add a Book</button>
+      </div>
       <table className="container">
         <thead>
           <tr>
