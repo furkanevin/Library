@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
 import Home from './pages/Home';
 import axios from 'axios';
 import { useEffect } from 'react';
@@ -8,6 +7,7 @@ import actionTypes from './redux/actions/actionTypes';
 
 function App() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     //! Fetch Books
     dispatch({ type: actionTypes.bookTypes.FETCH_BOOKS_START });
@@ -25,22 +25,22 @@ function App() {
           payload: 'Error : While fetching BOOKS',
         });
       });
-    // dispatch({ type: actionTypes.categoryTypes.FETCH_CATEGORIES_START });
-    // axios
-    //   .get('http://localhost:3004/categories')
-    //   .then((res) => {
-    //     dispatch({
-    //       type: actionTypes.categoryTypes.FETCH_CATEGORIES_SUCCESS,
-    //       payload: res.data,
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     dispatch({
-    //       type: actionTypes.categoryTypes.FETCH_CATEGORIES_FAIL,
-    //       payload: 'Error : While fetching CATEGORIES',
-    //     });
-    //   });
     //! Fetch Categories
+    dispatch({ type: actionTypes.categoryTypes.FETCH_CATEGORIES_START });
+    axios
+      .get('http://localhost:3004/categories')
+      .then((res) => {
+        dispatch({
+          type: actionTypes.categoryTypes.FETCH_CATEGORIES_SUCCESS,
+          payload: res.data,
+        });
+      })
+      .catch((err) => {
+        dispatch({
+          type: actionTypes.categoryTypes.FETCH_CATEGORIES_FAIL,
+          payload: 'Error : While fetching Categories',
+        });
+      });
   }, []);
 
   return (

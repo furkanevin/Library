@@ -8,7 +8,6 @@ const Header = () => {
         <Link to="/" className="nav-item nav-link active" aria-current="page">
           Home
         </Link>
-        <a className="nav-item nav-link">Home</a>
       </div>
     </nav>
   );

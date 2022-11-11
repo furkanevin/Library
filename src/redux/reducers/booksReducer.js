@@ -1,4 +1,4 @@
-import actionTypes from './../actions/actionTypes';
+import actionTypes from '../actions/actionTypes';
 
 const initialState = {
   start: false,
@@ -11,7 +11,10 @@ const initialState = {
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.bookTypes.FETCH_BOOKS_START:
-      return { ...state, start: true };
+      return {
+        ...state,
+        start: true,
+      };
     case actionTypes.bookTypes.FETCH_BOOKS_SUCCESS:
       return {
         ...state,
@@ -24,12 +27,13 @@ const booksReducer = (state = initialState, action) => {
       return {
         ...state,
         start: false,
+        succes: false,
         fail: true,
-        success: false,
         error: action.payload,
       };
     default:
       return state;
   }
 };
+
 export default booksReducer;

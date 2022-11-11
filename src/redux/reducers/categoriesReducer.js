@@ -1,4 +1,4 @@
-import actionTypes from './../actions/actionTypes';
+import actionTypes from '../actions/actionTypes';
 
 const initialState = {
   start: false,
@@ -10,9 +10,12 @@ const initialState = {
 
 const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.bookTypes.CATEGORIES_START:
-      return { ...state, start: true };
-    case actionTypes.bookTypes.CATEGORIES_SUCCESS:
+    case actionTypes.categoryTypes.FETCH_CATEGORIES_START:
+      return {
+        ...state,
+        start: true,
+      };
+    case actionTypes.categoryTypes.FETCH_CATEGORIES_SUCCESS:
       return {
         ...state,
         start: false,
@@ -20,16 +23,17 @@ const categoriesReducer = (state = initialState, action) => {
         success: true,
         categories: action.payload,
       };
-    case actionTypes.bookTypes.CATEGORIES_FAIL:
+    case actionTypes.categoryTypes.FETCH_CATEGORIES_FAIL:
       return {
         ...state,
         start: false,
-        fail: true,
         success: false,
+        fail: true,
         error: action.payload,
       };
     default:
       return state;
   }
 };
+
 export default categoriesReducer;
