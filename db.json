@@ -1,41 +1,67 @@
 {
-    "books":[
-        {
-            "id":"1",
-            "title":"And There Were None",
-            "isbn":"",
-            "author":"Agatha Cristie",
-            "publisher":"Varlık Yayınları ",
-            "categoryId":"2",
-            "isRead":true
-        },
-        {
-            "id":"2",
-            "title":"Art Of Racing in The Rain",
-            "isbn":"",
-            "author":"Garth Stein",
-            "publisher":"Is Bankası Yayınları",
-            "categoryId":"1",
-            "isRead":false
-        }
-    ],
-    "categories":[
-        {
-            "id":"1",
-            "name":"Roman"
-        },
-        {
-            "id":"2",
-            "name":"Hikaye"
-        },
-        {
-            "id":"3",
-            "name":"Bilim Kurgu"
-        },
-        {
-            "id":"4",
-            "name":"Fabl"
-        }
-    ]
-
+  "books": [
+    {
+      "id": "1",
+      "title": "And There Were None",
+      "isbn": "",
+      "author": "Agatha Cristie",
+      "publisher": "Varlık Yayınları ",
+      "categoryId": "2",
+      "isRead": true
+    },
+    {
+      "id": "2",
+      "title": "Art Of Racing in The Rain",
+      "isbn": "",
+      "author": "Garth Stein",
+      "publisher": "Is Bankası Yayınları",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1668271029899",
+      "title": "The Maze Runner",
+      "author": "James Dashner",
+      "publisher": "Delacorte Press",
+      "isbn": "9780375893773",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1668271177241",
+      "title": "The Witcher",
+      "author": "Andrzej Sapkowski",
+      "publisher": "Hachette Book Group.",
+      "isbn": "9781478933335",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1668271746782",
+      "title": "Test",
+      "author": "asdas",
+      "publisher": "adsa",
+      "isbn": "214231414",
+      "categoryId": "1",
+      "isRead": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Novel"
+    },
+    {
+      "id": "2",
+      "name": "Tale"
+    },
+    {
+      "id": "3",
+      "name": "Science Finction"
+    },
+    {
+      "id": "4",
+      "name": "Fabl"
+    }
+  ]
 }
