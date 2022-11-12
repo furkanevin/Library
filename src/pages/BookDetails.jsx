@@ -71,7 +71,10 @@ const BookDetails = () => {
             <figcaption>
               <h1>{title}</h1>
               <span>By {author}</span>
-              <p>Website dedicated to sharing resources</p>
+              <p>
+                You {isRead ? 'did' : 'didnt'} read this book{' '}
+                {isRead ? '' : 'yet'}
+              </p>
             </figcaption>
           </figure>
         </li>
