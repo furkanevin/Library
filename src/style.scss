@@ -196,19 +196,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-    .Modal {
-      min-width: 800px;
-      min-height: 900px;
+    .Modall {
+      width: 800px;
+      height: 700px;
       background-color: #eeee;
       border-radius: 20px;
       color: #303841;
       font-family: 'Poppins', sans-serif;
+      font-size: 18px;
       padding: 30px 30px;
       position: relative;
+      border: 1px solid;
+      input {
+        height: 50px;
+      }
+
       h3 {
         text-align: center;
+      }
+      .checkbox {
+        width: 30px;
+        height: 30px;
+      }
+      .buton {
+        width: 100px;
+        height: 50px;
+        font-family: 'Fragment Mono', monospace;
+        font-weight: 100;
+        font-size: 15px;
       }
     }
     .close {
