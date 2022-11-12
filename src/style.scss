@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fragment+Mono&family=Kalam:wght@300;400&family=Poppins:wght@200;300;400;500&display=swap');
+
 @mixin mobile {
   @media screen and (max-width: 760px) {
     @content;
@@ -183,4 +184,44 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #222831;
+}
+
+//! ADD BOOK
+.addBook {
+  overflow-y: hidden;
+  max-height: 100vh;
+  .blur {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .Modal {
+      min-width: 800px;
+      min-height: 900px;
+      background-color: #eeee;
+      border-radius: 20px;
+      color: #303841;
+      font-family: 'Poppins', sans-serif;
+      padding: 30px 30px;
+      position: relative;
+      h3 {
+        text-align: center;
+      }
+    }
+    .close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 30px;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #f6c90e;
+        transition: all 0.3s;
+      }
+    }
+  }
 }

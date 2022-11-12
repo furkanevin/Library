@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import actionTypes from './redux/actions/actionTypes';
 import BookDetails from './pages/BookDetails';
+import AddBook from './components/AddBook';
 function App() {
   const dispatch = useDispatch();
 
@@ -42,11 +43,11 @@ function App() {
         });
       });
   }, []);
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/add-a-book" element={<AddBook />} />
         <Route path="/book-detail/:bookId" element={<BookDetails />} />
       </Routes>
     </BrowserRouter>
