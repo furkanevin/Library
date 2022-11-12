@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import Loading from './Loading';
 
 const ListBooks = () => {
   const { booksState, categoriesState } = useSelector((state) => state);
@@ -8,7 +9,7 @@ const ListBooks = () => {
   return (
     <div className="listBooks">
       <div className="buttonHolder">
-        <button class="button-31">Add a Book</button>
+        <Link className="button-31">Add a Book</Link>
       </div>
       <table className="container">
         <thead>
