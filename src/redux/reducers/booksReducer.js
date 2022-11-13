@@ -32,9 +32,18 @@ const booksReducer = (state = initialState, action) => {
         error: action.payload,
       };
     case actionTypes.bookTypes.ADD_BOOK:
+      return { ...state, books: [...state.books, action.payload] };
+
+    case actionTypes.bookTypes.DELETE_BOOK:
+      const filtredBooks = state.books.filter(
+        (item) => item?.id !== action.payload
+      );
+      console.log(filtredBooks);
       return {
-        books: [...state.books, action.payload],
+        ...state,
+        books: filtredBooks,
       };
+
     default:
       return state;
   }

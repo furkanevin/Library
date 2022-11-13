@@ -51,9 +51,13 @@ const BookDetails = () => {
             <ul className="page">
               <li></li>
               <li>
-                <a className="btn" href="#">
-                  I read
-                </a>
+                {isRead ? (
+                  <p className="writing">You already read this</p>
+                ) : (
+                  <a className="btn" href="#">
+                    I read
+                  </a>
+                )}
               </li>
               <li></li>
               <li></li>
@@ -72,8 +76,8 @@ const BookDetails = () => {
               <h1>{title}</h1>
               <span>By {author}</span>
               <p>
-                You {isRead ? 'did' : 'didnt'} read this book{' '}
-                {isRead ? '' : 'yet'}
+                You {isRead ? ' did' : ' didnt'} read this book
+                {isRead ? '' : ' yet'}
               </p>
             </figcaption>
           </figure>

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import Header from './Header';
+import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import '../style.scss';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import actionTypes from './../redux/actions/actionTypes';
-
+import actionTypes from '../redux/actions/actionTypes';
 const AddBook = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -102,13 +101,11 @@ const AddBook = () => {
                 id="inputState"
                 className="form-select"
                 defaultValue={category}
-                onSelect={(event) => {
+                onChange={(event) => {
                   setCategory(event.target.value);
                 }}
               >
-                <option selected value="1">
-                  Novel
-                </option>
+                <option defaultValue="1">Novel</option>
                 <option value="2">Tale</option>
                 <option value="4">Fabl</option>
                 <option value="3">Science Fiction</option>

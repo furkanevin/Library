@@ -1,12 +1,24 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { AiFillDelete } from 'react-icons/ai';
+import actionTypes from './../redux/actions/actionTypes';
+import axios from 'axios';
 
 const ListBooks = () => {
   const { booksState, categoriesState } = useSelector((state) => state);
   const navigate = useNavigate();
-  const handleDelete = () => {};
+  const dispatch = useDispatch();
+  const handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:3004/books/${id}`)
+      .then((res) => {
+        dispatch({ type: actionTypes.bookTypes.DELETE_BOOK, payload: id });
+      })
+      .catch((err) => {
+        alert('Error while deleting book');
+      });
+  };
   return (
     <div className="listBooks">
       <div className="buttonHolder">
@@ -36,6 +48,7 @@ const ListBooks = () => {
             const booksCategory = categoriesState.categories.find(
               (item) => item?.id == book.categoryId
             );
+            const { title, id, author, publisher } = book;
             return (
               <>
                 <tr
@@ -43,14 +56,19 @@ const ListBooks = () => {
                     navigate(`/book-detail/${book.id}`);
                   }}
                 >
-                  <td>{book?.title}</td>
+                  <td>{title}</td>
                   <td>{booksCategory?.name}</td>
-                  <td>{book?.author}</td>
-                  <td>{book?.publisher}</td>
+                  <td>{author}</td>
+                  <td>{publisher}</td>
                 </tr>
-                <p className="del" onClick={handleDelete}>
+                <button
+                  className="del"
+                  onClick={() => {
+                    handleDelete(id);
+                  }}
+                >
                   <AiFillDelete />
-                </p>
+                </button>
               </>
             );
           })}

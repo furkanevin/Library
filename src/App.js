@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import actionTypes from './redux/actions/actionTypes';
 import BookDetails from './pages/BookDetails';
-import AddBook from './components/AddBook';
+import AddBook from './pages/AddBook';
 function App() {
   const dispatch = useDispatch();
 
