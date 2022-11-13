@@ -27,12 +27,12 @@
 }
 :root {
   --body-bg-color: #e5f4f9;
-  --body-color-light: #8b939c;
+  --body-color-light: #000000;
   --body-font: 'Roboto', sans-serif;
   --page-bg-color: #f2f5f7;
   --body-color: #3d4954;
   --border-color: #b8bec3;
-  --placeholder: #ccd0d2;
+  --placeholder: #92989b;
 }
 
 * {
@@ -78,7 +78,7 @@ body {
   @extend %display;
   height: 100px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #eeee;
   padding: 0 30px;
   font-size: 19px;
   font-weight: 500;

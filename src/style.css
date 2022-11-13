@@ -929,14 +929,14 @@ h2 a {
   border: none;
   background-color: rgb(82, 7, 7);
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 10px 26px;
   color: #eeee;
   transition: all 0.4s;
   cursor: pointer;
   font-size: 23px;
 }
 .container tr:hover + .del {
-  margin-left: 1315px;
+  margin-left: 1306px;
   transition: all 0.4s;
 }
 .del:hover {
