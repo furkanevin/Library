@@ -1,10 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { AiFillDelete } from 'react-icons/ai';
 
 const ListBooks = () => {
   const { booksState, categoriesState } = useSelector((state) => state);
   const navigate = useNavigate();
+  const handleDelete = () => {};
   return (
     <div className="listBooks">
       <div className="buttonHolder">
@@ -35,16 +37,21 @@ const ListBooks = () => {
               (item) => item?.id == book.categoryId
             );
             return (
-              <tr
-                onClick={() => {
-                  navigate(`/book-detail/${book.id}`);
-                }}
-              >
-                <td>{book?.title}</td>
-                <td>{booksCategory?.name}</td>
-                <td>{book?.author}</td>
-                <td>{book?.publisher}</td>
-              </tr>
+              <>
+                <tr
+                  onClick={() => {
+                    navigate(`/book-detail/${book.id}`);
+                  }}
+                >
+                  <td>{book?.title}</td>
+                  <td>{booksCategory?.name}</td>
+                  <td>{book?.author}</td>
+                  <td>{book?.publisher}</td>
+                </tr>
+                <p className="del" onClick={handleDelete}>
+                  <AiFillDelete />
+                </p>
+              </>
             );
           })}
         </tbody>
