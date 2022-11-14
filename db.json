@@ -37,11 +37,29 @@
       "isRead": false
     },
     {
-      "id": "1668368628420",
-      "title": "dfsd",
-      "author": "fsdf",
-      "publisher": "sfsdf",
-      "isbn": "fsdfsd",
+      "id": "1668439442583",
+      "title": " Lolita ",
+      "author": " Vladimir Nabokov",
+      "publisher": " Random House Audio",
+      "isbn": "14532123123",
+      "categoryId": "2",
+      "isRead": false
+    },
+    {
+      "id": "1668439667181",
+      "title": "Hyperion",
+      "author": "Dan Simmons",
+      "publisher": "Delacorte Press",
+      "isbn": "86213172",
+      "categoryId": "3",
+      "isRead": true
+    },
+    {
+      "id": "1668439776035",
+      "title": "1984",
+      "author": "George Orwell ",
+      "publisher": "Secker & Warburg",
+      "isbn": "412431241",
       "categoryId": "3",
       "isRead": true
     }

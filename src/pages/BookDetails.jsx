@@ -5,14 +5,16 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import actionTypes from '../redux/actions/actionTypes';
-import Suggesteds from '../components/Suggesteds';
+import SuggestedCategory from '../components/SuggestedCategory';
+import SuggestedRead from '../components/SuggestedRead';
+
 const BookDetails = () => {
   const bookId = useParams();
   const dispatch = useDispatch();
   const { booksState, categoriesState, singleState } = useSelector(
     (state) => state
   );
-  const { title, isbn, author, publisher, categoryId, isRead } =
+  const { id, title, isbn, author, publisher, categoryId, isRead } =
     singleState.book;
 
   const thisCategory = categoriesState.categories.find(
@@ -34,8 +36,7 @@ const BookDetails = () => {
           payload: 'Error : While fetching Single Book',
         });
       });
-  }, []);
-
+  }, [bookId]);
   return (
     <div className="book-details">
       <Header />
@@ -76,14 +77,18 @@ const BookDetails = () => {
         </figure>
         <div className="this-details">
           <h4>{title}</h4>
-          <p>By {author}</p>
+          <p className="author">By {author}</p>
           <p>{isRead ? 'You did read this book' : "You did'nt read it yet"}</p>
         </div>
       </div>
-      <Suggesteds
-        categoryId={categoryId}
-        thisCategory={thisCategory?.categoryName}
-      />
+      {isRead ? (
+        <SuggestedCategory
+          categoryId={categoryId}
+          thisCategory={thisCategory?.categoryName}
+        />
+      ) : (
+        <SuggestedRead />
+      )}
     </div>
   );
 };

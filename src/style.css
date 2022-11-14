@@ -598,17 +598,39 @@ Table of Contents
 }
 
 .yellow {
-  background-color: #f1c40f;
-  background-image: -webkit-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
-  background-image: -moz-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
-  background-image: linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
+  background-color: #fa8bff;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
+  background-image: -moz-linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
+  background-image: -o-linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
+  background-image: linear-gradient(
+    45deg,
+    #fa8bff 0%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  );
 }
 
 .blue {
-  background-color: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db 58%, #2a90d4 0%);
-  background-image: -moz-linear-gradient(top, #3498db 58%, #2a90d4 0%);
-  background-image: linear-gradient(top, #3498db 58%, #2a90d4 0%);
+  background-color: #08aeea;
+  background-image: -webkit-linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  background-image: -moz-linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  background-image: -o-linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
 }
 
 .grey {
@@ -719,14 +741,7 @@ figcaption p {
   }
 }
 
-/*! Table
-
-
-/*	
-	Table Responsive
-	===================
-	Author: https://github.com/pablorgarcia
- */
+/*! TABLE  */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
@@ -857,7 +872,7 @@ h2 a {
 /*! List */
 .buttonHolder {
   width: 80%;
-  margin: 130px auto 0;
+  margin: 10 auto 0;
   display: flex;
   justify-content: flex-end;
 }
