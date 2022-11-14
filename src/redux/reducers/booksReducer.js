@@ -43,7 +43,8 @@ const booksReducer = (state = initialState, action) => {
         ...state,
         books: filtredBooks,
       };
-
+    case actionTypes.bookTypes.SET_SEARCH:
+      return {};
     default:
       return state;
   }

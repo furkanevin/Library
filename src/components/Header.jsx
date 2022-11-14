@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '.././style.scss';
+import { useDispatch } from 'react-redux';
 const Header = () => {
+  const [search, setSearch] = useState('');
+  const dispatch = useDispatch();
+  const handleSearch = (event) => {
+    event.preventDefault();
+    setSearch(event.target.value);
+    console.log(search);
+  };
   return (
     <div className="header">
       <div className="browse">
@@ -21,7 +29,14 @@ const Header = () => {
           </svg>
         </div>
         <div className="search-bar">
-          <input type="text" placeholder="Search Book" />
+          <input
+            type="text"
+            placeholder="Search Book"
+            value={search}
+            onChange={(e) => {
+              handleSearch(e.target.value);
+            }}
+          />
         </div>
       </div>
       <Link to="/" className="header-title">

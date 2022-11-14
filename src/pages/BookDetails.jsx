@@ -7,10 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import actionTypes from '../redux/actions/actionTypes';
 import SuggestedCategory from '../components/SuggestedCategory';
 import SuggestedRead from '../components/SuggestedRead';
+import { useState } from 'react';
 
 const BookDetails = () => {
-  const bookId = useParams();
-  const dispatch = useDispatch();
   const { booksState, categoriesState, singleState } = useSelector(
     (state) => state
   );
@@ -20,6 +19,12 @@ const BookDetails = () => {
   const thisCategory = categoriesState.categories.find(
     (item) => item.id === categoryId
   );
+  const bookId = useParams();
+  const dispatch = useDispatch();
+
+  //!
+  //!
+
   useEffect(() => {
     dispatch({ type: actionTypes.bookTypes.FETCH_BOOK_START });
     axios
@@ -57,9 +62,7 @@ const BookDetails = () => {
               {isRead ? (
                 <p className="writing">You already read this</p>
               ) : (
-                <a className="btn" href="#">
-                  I read
-                </a>
+                <a className="btn">I read</a>
               )}
             </li>
             <li></li>
@@ -78,7 +81,26 @@ const BookDetails = () => {
         <div className="this-details">
           <h4>{title}</h4>
           <p className="author">By {author}</p>
-          <p>{isRead ? 'You did read this book' : "You did'nt read it yet"}</p>
+          <p>
+            Type of the book: <span>{thisCategory?.categoryName}</span>
+          </p>
+          <p>
+            ISBN: <span>{isbn}</span>
+          </p>
+          <p>
+            Publisher: <span>{publisher}</span>
+          </p>
+          <div>
+            {isRead ? (
+              <p>
+                You <span>did</span> read this book
+              </p>
+            ) : (
+              <p>
+                You <span> did'nt {''}</span>read this book yet
+              </p>
+            )}
+          </div>
         </div>
       </div>
       {isRead ? (

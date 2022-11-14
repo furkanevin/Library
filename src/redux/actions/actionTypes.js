@@ -8,6 +8,8 @@ const actionTypes = {
     FETCH_BOOK_FAIL: 'FETCH_BOOK_FAIL',
     ADD_BOOK: 'ADD_BOOK',
     DELETE_BOOK: 'DELETE_BOOK',
+    SET_READ: 'SET_READ',
+    SET_SEARCH: 'SET_SEARCH',
   },
   categoryTypes: {
     FETCH_CATEGORIES_START: 'FETCH_CATEGORIES_START',

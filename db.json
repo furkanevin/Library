@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "And There Were None",
-      "isbn": "",
+      "isbn": "21341241",
       "author": "Agatha Cristie",
       "publisher": "Varlık Yayınları ",
       "categoryId": "2",
@@ -12,7 +12,7 @@
     {
       "id": "2",
       "title": "Art Of Racing in The Rain",
-      "isbn": "",
+      "isbn": "5324143123",
       "author": "Garth Stein",
       "publisher": "Is Bankası Yayınları",
       "categoryId": "1",

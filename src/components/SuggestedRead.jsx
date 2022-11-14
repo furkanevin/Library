@@ -17,6 +17,7 @@ const SuggestedRead = () => {
               onClick={() => {
                 navigate(`/book-detail/${id}`);
               }}
+              key={id}
             >
               {title}
               <p>{author}</p>

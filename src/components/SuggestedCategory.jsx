@@ -9,17 +9,17 @@ const SuggestedCategory = (props) => {
   const suggestedCategory = booksState.filter(
     (book) => book.categoryId === categoryId
   );
-  const [shouldIFetch, setShouldIFetch] = useState(false);
   return (
     <div className="suggesteds">
       <h5>
-        Anothers from <span>{thisCategory}</span>{' '}
+        Anothers from <span>{thisCategory}</span>
       </h5>
       <div className="panel">
         {suggestedCategory.map((suggested) => {
           const { id, title, author } = suggested;
           return (
             <div
+              key={id}
               onClick={() => {
                 navigate(`/book-detail/${id}`);
               }}
