@@ -57,7 +57,7 @@ const ListBooks = () => {
                   }}
                 >
                   <td>{title}</td>
-                  <td>{booksCategory?.name}</td>
+                  <td>{booksCategory?.categoryName}</td>
                   <td>{author}</td>
                   <td>{publisher}</td>
                 </tr>

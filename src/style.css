@@ -10,15 +10,6 @@ font-family: 'Poppins', sans-serif; */
   content: '';
 }
 
-body {
-  background: #222831;
-  color: #34495e;
-  font-family: 'Lato', 'Arial', sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
-  font-family: 'Poppins', sans-serif;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -34,7 +25,7 @@ a {
   display: inline-block;
   text-transform: uppercase;
   border: 2px solid #2c3e50;
-  margin-top: 100px;
+  margin: 100px 30%;
   font-size: 0.7em;
   font-weight: 700;
   padding: 0.1em 0.4em;
@@ -47,28 +38,6 @@ a {
 .btn:hover {
   border-color: #16a085;
   color: #16a085;
-}
-
-/* basic grid, only for this demo */
-
-.align {
-  clear: both;
-  margin-top: 130px;
-  width: 100%;
-  border: 1px solid;
-  max-width: 370px;
-  text-align: center;
-  margin-left: 200px;
-}
-
-.align > li {
-  width: 300px;
-  min-height: 300px;
-  display: inline-block;
-  margin: 30px 20px 30px 30px;
-  padding: 0 0 0 60px;
-  vertical-align: top;
-  margin-left: 0px;
 }
 
 /* ///////////////////////////////////////////////////

@@ -49,19 +49,19 @@
   "categories": [
     {
       "id": "1",
-      "name": "Novel"
+      "categoryName": "Novel"
     },
     {
       "id": "2",
-      "name": "Tale"
+      "categoryName": "Tale"
     },
     {
       "id": "3",
-      "name": "Science Finction"
+      "categoryName": "Science Finction"
     },
     {
       "id": "4",
-      "name": "Fabl"
+      "categoryName": "Fabl"
     }
   ]
 }
