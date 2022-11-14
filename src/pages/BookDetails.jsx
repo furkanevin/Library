@@ -75,7 +75,9 @@ const BookDetails = () => {
           </ul>
         </figure>
         <div className="this-details">
-          <h4>HEYYYYYYYYYYYYYYYYY</h4>
+          <h4>{title}</h4>
+          <p>By {author}</p>
+          <p>{isRead ? 'You did read this book' : "You did'nt read it yet"}</p>
         </div>
       </div>
       <Suggesteds

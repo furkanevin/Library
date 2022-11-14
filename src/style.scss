@@ -274,12 +274,21 @@ body {
   .book-and-detail {
     display: flex;
     gap: 100px;
+    justify-content: center;
+    margin-top: -200px;
+
+    .book {
+      margin-top: 80px;
+    }
     .this-details {
       position: relative;
       display: block;
-      width: 500px;
+      width: 700px;
+      height: 600px;
       color: white;
-      border: 1px solid red;
+      background-color: #222831;
+      border-radius: 30px;
+      padding: 20px;
 
       h4 {
         font-size: 40px;
