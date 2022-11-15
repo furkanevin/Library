@@ -86,30 +86,72 @@ body {
   font-size: 19px;
   font-weight: 500;
   color: var(--body-color-light);
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+
   flex-shrink: 0;
   position: absolute;
   top: 0;
 }
+.search-extended {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 350px;
 
-.search-bar {
-  position: relative;
-  input {
-    height: 100%;
-    width: 100%;
-    display: block;
-    background-color: transparent;
-    border: none;
-    font-weight: 600;
-    padding: 0 10px 0 40px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%238b939c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3e%3ccircle cx='11' cy='11' r='8'/%3e%3cpath d='M21 21l-4.35-4.35'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position: 15px 50%;
-    color: var(--body-color);
-    font-family: var(--body-font);
-    &::placeholder {
-      color: var(--placeholder);
+  margin-top: 300px;
+  .search-list {
+    width: 90%;
+    background-color: #ffffff;
+    overflow: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    .search-child {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 10px;
+      &:hover {
+        background-color: #92989b;
+        color: #222831;
+      }
+    }
+  }
+  .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      height: 100%;
+      width: 60%;
+      display: block;
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
+      padding: 10px 5px;
+      color: var(--body-color);
+      font-family: var(--body-font);
+
+      &::placeholder {
+        color: var(--placeholder);
+      }
+      :focus {
+        .search-list {
+          display: block;
+        }
+      }
+    }
+    button {
+      outline: none;
+      border: none;
+      background-color: #eeeeee00;
+      scale: 1.4;
+      cursor: pointer;
     }
   }
 }

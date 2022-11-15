@@ -44,7 +44,12 @@ const booksReducer = (state = initialState, action) => {
         books: filtredBooks,
       };
     case actionTypes.bookTypes.SET_SEARCH:
-      return {};
+      const searchFilter = state?.books?.filter((item) => {
+        return item?.title.toLowerCase().includes(action.payload.toLowerCase());
+      });
+      return {
+        books: searchFilter,
+      };
     default:
       return state;
   }

@@ -926,3 +926,8 @@ h2 a {
 .del:hover {
   margin-left: 1315px;
 }
+.none {
+  width: 0;
+  height: 0;
+  display: none;
+}
